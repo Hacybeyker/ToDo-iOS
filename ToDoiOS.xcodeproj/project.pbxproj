@@ -24,10 +24,22 @@
 		17C92C312B28FB6700D1CF85 /* UpdateNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C92C302B28FB6700D1CF85 /* UpdateNoteView.swift */; };
 		17D7FC122B82299800D3FC29 /* RemoveNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7FC112B82299800D3FC29 /* RemoveNoteUseCase.swift */; };
 		17D7FC152B827A4E00D3FC29 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7FC142B827A4E00D3FC29 /* Mocks.swift */; };
+		17D7FC182B82C7EA00D3FC29 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 17D7FC172B82C7EA00D3FC29 /* InlineSnapshotTesting */; };
+		17D7FC1A2B82C7EA00D3FC29 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 17D7FC192B82C7EA00D3FC29 /* SnapshotTesting */; };
+		17D7FC1C2B82C84900D3FC29 /* CreateNoteViewSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7FC1B2B82C84900D3FC29 /* CreateNoteViewSnapshotTest.swift */; };
+		17D7FC212B82CB4D00D3FC29 /* UpdateNoteViewSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7FC202B82CB4D00D3FC29 /* UpdateNoteViewSnapshotTest.swift */; };
+		17D7FC2B2B82D10200D3FC29 /* ToDoiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7FC2A2B82D10200D3FC29 /* ToDoiOSUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		179C1E862B2A61B300DECDD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C92C0E2B28A4C200D1CF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17C92C152B28A4C200D1CF85;
+			remoteInfo = ToDoiOS;
+		};
+		17D7FC2E2B82D10200D3FC29 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17C92C0E2B28A4C200D1CF85 /* Project object */;
 			proxyType = 1;
@@ -56,6 +68,10 @@
 		17C92C302B28FB6700D1CF85 /* UpdateNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoteView.swift; sourceTree = "<group>"; };
 		17D7FC112B82299800D3FC29 /* RemoveNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteUseCase.swift; sourceTree = "<group>"; };
 		17D7FC142B827A4E00D3FC29 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		17D7FC1B2B82C84900D3FC29 /* CreateNoteViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewSnapshotTest.swift; sourceTree = "<group>"; };
+		17D7FC202B82CB4D00D3FC29 /* UpdateNoteViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoteViewSnapshotTest.swift; sourceTree = "<group>"; };
+		17D7FC282B82D10200D3FC29 /* ToDoiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D7FC2A2B82D10200D3FC29 /* ToDoiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoiOSUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +79,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D7FC182B82C7EA00D3FC29 /* InlineSnapshotTesting in Frameworks */,
+				17D7FC1A2B82C7EA00D3FC29 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		17C92C132B28A4C200D1CF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17D7FC252B82D10200D3FC29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -99,10 +124,10 @@
 		179C1E832B2A61B300DECDD4 /* ToDoiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				17D7FC1E2B82C86B00D3FC29 /* UnitTests */,
+				17D7FC1D2B82C85F00D3FC29 /* IntegratioonTests */,
+				17D7FC1F2B82C88200D3FC29 /* SnapshotTests */,
 				17D7FC132B827A2000D3FC29 /* Mocks */,
-				179C1E842B2A61B300DECDD4 /* NoteTest.swift */,
-				179C1E932B2B545800DECDD4 /* ViewModelIntegrationTests.swift */,
-				179C1E8B2B2A679C00DECDD4 /* ViewModelTests.swift */,
 			);
 			path = ToDoiOSTests;
 			sourceTree = "<group>";
@@ -112,6 +137,7 @@
 			children = (
 				17C92C182B28A4C200D1CF85 /* ToDoiOS */,
 				179C1E832B2A61B300DECDD4 /* ToDoiOSTests */,
+				17D7FC292B82D10200D3FC29 /* ToDoiOSUITests */,
 				17C92C172B28A4C200D1CF85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +147,7 @@
 			children = (
 				17C92C162B28A4C200D1CF85 /* ToDoiOS.app */,
 				179C1E822B2A61B300DECDD4 /* ToDoiOSTests.xctest */,
+				17D7FC282B82D10200D3FC29 /* ToDoiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +192,40 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		17D7FC1D2B82C85F00D3FC29 /* IntegratioonTests */ = {
+			isa = PBXGroup;
+			children = (
+				179C1E932B2B545800DECDD4 /* ViewModelIntegrationTests.swift */,
+			);
+			path = IntegratioonTests;
+			sourceTree = "<group>";
+		};
+		17D7FC1E2B82C86B00D3FC29 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				179C1E842B2A61B300DECDD4 /* NoteTest.swift */,
+				179C1E8B2B2A679C00DECDD4 /* ViewModelTests.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		17D7FC1F2B82C88200D3FC29 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				17D7FC1B2B82C84900D3FC29 /* CreateNoteViewSnapshotTest.swift */,
+				17D7FC202B82CB4D00D3FC29 /* UpdateNoteViewSnapshotTest.swift */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		17D7FC292B82D10200D3FC29 /* ToDoiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17D7FC2A2B82D10200D3FC29 /* ToDoiOSUITests.swift */,
+			);
+			path = ToDoiOSUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +243,10 @@
 				179C1E872B2A61B300DECDD4 /* PBXTargetDependency */,
 			);
 			name = ToDoiOSTests;
+			packageProductDependencies = (
+				17D7FC172B82C7EA00D3FC29 /* InlineSnapshotTesting */,
+				17D7FC192B82C7EA00D3FC29 /* SnapshotTesting */,
+			);
 			productName = ToDoiOSTests;
 			productReference = 179C1E822B2A61B300DECDD4 /* ToDoiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -203,6 +268,24 @@
 			productReference = 17C92C162B28A4C200D1CF85 /* ToDoiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		17D7FC272B82D10200D3FC29 /* ToDoiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17D7FC302B82D10200D3FC29 /* Build configuration list for PBXNativeTarget "ToDoiOSUITests" */;
+			buildPhases = (
+				17D7FC242B82D10200D3FC29 /* Sources */,
+				17D7FC252B82D10200D3FC29 /* Frameworks */,
+				17D7FC262B82D10200D3FC29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17D7FC2F2B82D10200D3FC29 /* PBXTargetDependency */,
+			);
+			name = ToDoiOSUITests;
+			productName = ToDoiOSUITests;
+			productReference = 17D7FC282B82D10200D3FC29 /* ToDoiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,7 +293,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					179C1E812B2A61B300DECDD4 = {
@@ -219,6 +302,10 @@
 					};
 					17C92C152B28A4C200D1CF85 = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					17D7FC272B82D10200D3FC29 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 17C92C152B28A4C200D1CF85;
 					};
 				};
 			};
@@ -231,12 +318,16 @@
 				Base,
 			);
 			mainGroup = 17C92C0D2B28A4C200D1CF85;
+			packageReferences = (
+				17D7FC162B82C7EA00D3FC29 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 17C92C172B28A4C200D1CF85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				17C92C152B28A4C200D1CF85 /* ToDoiOS */,
 				179C1E812B2A61B300DECDD4 /* ToDoiOSTests */,
+				17D7FC272B82D10200D3FC29 /* ToDoiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +349,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17D7FC262B82D10200D3FC29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,7 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D7FC1C2B82C84900D3FC29 /* CreateNoteViewSnapshotTest.swift in Sources */,
 				179C1E8C2B2A679C00DECDD4 /* ViewModelTests.swift in Sources */,
+				17D7FC212B82CB4D00D3FC29 /* UpdateNoteViewSnapshotTest.swift in Sources */,
 				179C1E942B2B545800DECDD4 /* ViewModelIntegrationTests.swift in Sources */,
 				179C1E852B2A61B300DECDD4 /* NoteTest.swift in Sources */,
 				17D7FC152B827A4E00D3FC29 /* Mocks.swift in Sources */,
@@ -290,6 +390,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17D7FC242B82D10200D3FC29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17D7FC2B2B82D10200D3FC29 /* ToDoiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -297,6 +405,11 @@
 			isa = PBXTargetDependency;
 			target = 17C92C152B28A4C200D1CF85 /* ToDoiOS */;
 			targetProxy = 179C1E862B2A61B300DECDD4 /* PBXContainerItemProxy */;
+		};
+		17D7FC2F2B82D10200D3FC29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17C92C152B28A4C200D1CF85 /* ToDoiOS */;
+			targetProxy = 17D7FC2E2B82D10200D3FC29 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -518,6 +631,40 @@
 			};
 			name = Release;
 		};
+		17D7FC312B82D10200D3FC29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQ86F79KUL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hacybeyker.ToDoiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToDoiOS;
+			};
+			name = Debug;
+		};
+		17D7FC322B82D10200D3FC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQ86F79KUL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hacybeyker.ToDoiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToDoiOS;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,7 +695,40 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		17D7FC302B82D10200D3FC29 /* Build configuration list for PBXNativeTarget "ToDoiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17D7FC312B82D10200D3FC29 /* Debug */,
+				17D7FC322B82D10200D3FC29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17D7FC162B82C7EA00D3FC29 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17D7FC172B82C7EA00D3FC29 /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D7FC162B82C7EA00D3FC29 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		17D7FC192B82C7EA00D3FC29 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D7FC162B82C7EA00D3FC29 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17C92C0E2B28A4C200D1CF85 /* Project object */;
 }

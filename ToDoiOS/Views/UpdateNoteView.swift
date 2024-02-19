@@ -17,42 +17,44 @@ struct UpdateNoteView: View {
   @Environment(\.dismiss) private var dismiss
 
   var body: some View {
-    VStack {
-      Form {
-        Section {
-          TextField("", text: $title, prompt: Text("*Titulo"), axis: .vertical)
-          TextField("", text: $text, prompt: Text("*Texto"), axis: .vertical)
-        }
+      NavigationStack{
+          VStack {
+              Form {
+                  Section {
+                      TextField("", text: $title, prompt: Text("*Titulo"), axis: .vertical)
+                      TextField("", text: $text, prompt: Text("*Texto"), axis: .vertical)
+                  }
+              }
+              Button(action: {
+                  viewModel.removeNoteWith(identifier: identifier)
+                  dismiss()
+              }, label: {
+                  Text("Eliminar Nota")
+                      .foregroundStyle(.gray)
+                      .underline()
+              })
+              .buttonStyle(BorderedButtonStyle())
+              Spacer()
+          }
+          .background(Color(uiColor: .systemGroupedBackground))
+          .toolbar {
+              ToolbarItem(placement: .topBarTrailing) {
+                  Button {
+                      viewModel.updateNoteWith(identifier: identifier, newTitle: title, newText: text)
+                      dismiss()
+                  } label: {
+                      Text("Guardar")
+                          .bold()
+                  }
+              }
+          }
+          .navigationTitle("Modificar Nota")
       }
-        Button(action: {
-            viewModel.removeNoteWith(identifier: identifier)
-            dismiss()
-        }, label: {
-            Text("Eliminar Nota")
-                .foregroundStyle(.gray)
-                .underline()
-        })
-        .buttonStyle(BorderedButtonStyle())
-        Spacer()
-    }
-    .background(Color(uiColor: .systemGroupedBackground))
-    .toolbar {
-      ToolbarItem(placement: .topBarTrailing) {
-        Button {
-          viewModel.updateNoteWith(identifier: identifier, newTitle: title, newText: text)
-            dismiss()
-        } label: {
-          Text("Guardar")
-            .bold()
-        }
-      }
-    }
-    .navigationTitle("Modificar Nota")
   }
 }
 
 #Preview {
-    NavigationStack{
+
         UpdateNoteView(viewModel: ViewModel.init(), identifier: .init(), title: "Demo 1", text: "Description 1")
       }
-    }
+    
