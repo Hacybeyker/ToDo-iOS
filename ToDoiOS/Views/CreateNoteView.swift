@@ -20,8 +20,8 @@ struct CreateNoteView: View {
         NavigationStack{
             Form{
                 Section{
-                    TextField("", text:$title, prompt: Text("*Titulo"), axis: .vertical)
-                    TextField("", text:$text, prompt: Text("*Texto"), axis: .vertical)
+                    TextField("", text:$title, prompt: Text("*Titulo"), axis: .vertical).accessibilityIdentifier("create_note_title_identifier")
+                    TextField("", text:$text, prompt: Text("*Texto"), axis: .vertical).accessibilityIdentifier("create_note_text_identifier")
                 } footer: {
                     Text("* El título es obligatorio")
                 }

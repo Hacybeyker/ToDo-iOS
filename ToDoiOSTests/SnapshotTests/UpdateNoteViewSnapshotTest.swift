@@ -9,11 +9,31 @@ import XCTest
 import SnapshotTesting
 
 @testable import ToDoiOS
+import SwiftUI
 
 final class UpdateNoteViewSnapshotTest: XCTestCase {
 
-    func testUpdateNoteView() throws {
-        let updateNoteView = UpdateNoteView(viewModel: ViewModel.init(), identifier: .init(), title: "Demo 1", text: "Description 1")
+    func testUpdateNoteViewWhitoutData() throws {
+        let updateNoteView = NavigationStack {
+            UpdateNoteView(
+                viewModel: ViewModel.init(),
+                identifier: .init(),
+                title: "",
+                text: "")
+        }
+        
+        assertSnapshot(of: updateNoteView, as: .image)
+    }
+    
+    func testUpdateNoteViewWithData() throws {
+        let updateNoteView = NavigationStack {
+            UpdateNoteView(
+                viewModel: ViewModel.init(),
+                identifier: .init(),
+                title: "Demo 1",
+                text: "Description 1")
+        }
+        
         assertSnapshot(of: updateNoteView, as: .image)
     }
 
